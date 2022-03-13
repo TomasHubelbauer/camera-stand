@@ -3,9 +3,9 @@
 This repository hosts the development of a 3D model for a 3D printed part that
 is used to mount my camera to use as a webcam behind my monitor.
 
-## Status & Goal
-
 ![](camera-stand.3mf/Metadata/thumbnail.png)
+
+## Status & Goal
 
 The part is a work in progress and I am iterating on the design as of current.
 
