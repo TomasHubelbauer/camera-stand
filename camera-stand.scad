@@ -1,28 +1,64 @@
-// The main bit the slides in between the top left and top right screws
-// holding the monitor to the VESA mount plate
-// This can be at least 37 mm tall (Z axis), maybe more, have not tried yet.
-translate([0, 0, 20]) cube([98, 4, 17]);
+// The distance between the right side of the left screw and left side of the
+// right screw connecting the VESA mount plate and the screen (as seen when
+// sitting in front of the screen)
+screws_distance = 96;
 
-// The bit that sits on the opposite side of the top right screw holding the
-// screen to the VESA mount plate (as seen when sitting in front of the screen)
-translate([98 + 3, 0, 37 - 4]) cube([4, 4, 4]);
+// The gap between the back of the screen and the flat side of the VESA mount
+// plate facing the screen - the thickness of a support leg that fits there
+plate_screen_gap = 4;
 
-// The bit that sits on the opposite side of the top left screw holding the
-// screen to the VESA mount plate (as seen when sitting in front of the screen)
-translate([0 - 3 - 4, 0, 37 - 4]) cube([4, 4, 4]);
+// The distance between the top point of the VESA mount plate arc and the top
+// side of the left and right top screws connecting the plate and the screen
+// (as seen when sitting in front of the screen)
+tip_screw_distance = 30;
 
-// The flat bit that connects the boxes that are placed neighboring the top VESA
-// mount plate screws - making the whole assembly into sort of a double hook on
-// top of the screws
-translate([0 - 3 - 4, 0, 37]) cube([4 + 3 + 98 + 3 + 4, 10, 4]);
+// The depth between the top point of the VESA mount plate arc and the possible
+// flaps that could collide with a box slotted in between the screen and the
+// mount plate between the two top screws
+// This is the minimum, I have not measured and fit tested for a maximum yet.
+tip_pit_depth = 40;
 
-// The part that is on the opposite side of the mounting plate, a counterpart to
-// the main mounting box, which together with the above flat level panel builds
-// another hook, this time over the round mounting plate's highest point and not
-// over the screws in it
-// This must be less than or equal to 74 mm because the mounting plate has flaps
-// in it which would prevent sinking this as deep over it otherwise.
-// This can also be at most 25 mm tall (Z axis) because if it went deeper than
-// that, it would collide with another flap on the mounting plate which has the
-// threads the screws connecting the two plate parts screw into.
-translate([(98 - 74) / 2, 4 + 2, 20]) cube([74, 4, 17]);
+// The diameter of a single screw used to calculate the gap between two parts
+// that sit supported on and by the screw when bridged over their tops
+screw_diameter = 3;
+
+// The size of the square columns that sit at the outside of the top left and
+// right screws of the VESA mount plate forming a hook together with the main
+// rectangle leg and the surface that connects the three legs together to make
+// a double hook
+square_leg_size = 4;
+
+// The distance from the left side to the right side of the whole leg assembly
+// (left leg column, left screw, rectangular leg, right screw, right leg column)
+leg_bridge_width = square_leg_size * 2 + screw_diameter * 2 + screws_distance;
+
+// The height of the columnal legs (the distance from the tip of the plate arc,
+// the diameter of the screws themselves and a little overhang which I made the
+// same size as the footprint of the columns so the overhang is a cube)
+square_leg_height = tip_screw_distance + screw_diameter + square_leg_size;
+
+// The height of the rectangular leg that slots between the screen and the VESA
+// mount plate and the screws on the plate - the depth into that gap
+// This is a bit more that the columnal legs height, but I don't know exactly by
+// how much so as `tip_pit_depth` is a minimum and I have not measured maximum.
+rectangle_leg_height = tip_pit_depth;
+
+// The rectangular leg that slots in between the screen back and the VESA mount
+// plate on one axis and the two top screws on the plate on the other axis
+linear_extrude(plate_screen_gap) polygon([
+  [0, 0],
+  [leg_bridge_width, 0],
+  [leg_bridge_width, square_leg_height],
+  [leg_bridge_width - square_leg_size, square_leg_height],
+  [leg_bridge_width - square_leg_size, square_leg_height - square_leg_size - screw_diameter],
+  [leg_bridge_width - square_leg_size - screw_diameter, square_leg_height - square_leg_size - screw_diameter],
+  [leg_bridge_width - square_leg_size - screw_diameter, rectangle_leg_height],
+  [square_leg_size + screw_diameter, rectangle_leg_height],
+  [square_leg_size + screw_diameter, tip_screw_distance],
+  [square_leg_size, tip_screw_distance],
+  [square_leg_size, square_leg_height],
+  [0, square_leg_height],
+]);
+
+// TODO: Design the other plate with 74 mm of width between the flaps on the
+// other side of the VESA mount plate
