@@ -1,0 +1,6 @@
+NAME_3MF=(*.3mf)
+NAME=${NAME_3MF%%.*}
+NAME_ZIP=$NAME".zip"
+mv $NAME_3MF $NAME_ZIP
+unzip -d $NAME_3MF $NAME_ZIP
+rm $NAME_ZIP
