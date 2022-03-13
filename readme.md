@@ -9,13 +9,10 @@ I develop the part in OpenSCAD configured to export ASCII STL, slice it using
 PrusaSlicer with a script (`./3mf-zip-dir.sh`) to unzip the 3MF project file to
 a directory of the same name and print it using a Prusa MK3S 3D printer.
 
-The part sits on top of the VESA mount the monitor is secured to the wall with.
+This part sits on top of the VESA mount the monitor is secured to the wall with.
+The mount is two-part, one part attached to the wall, the other to the screen
+and the latter slides into the former and is secured using screws.
 
-As of current, I am testing for a fit with the space between the mount plate and
-the wall and the other side of the mount and the curved back of the screen.
-
-It seems the mount plate to wall distance is around 21 mm and I am winging the
-dimensions between the back of the screen and the mount plate. The mount plate
-is also circular and I will later try to design the part so that it sits snug on
-top of the mount plate and stays level by attaching to a horizontal piece used
-to screw the two mount parts together that sticks out from the mount plate.
+My aim is to design a shape that can sit on top of the VESA mount and produce a
+level surface which won't shake or wobble. On top of this surface I will later
+recess a shape to fit my camera in.
