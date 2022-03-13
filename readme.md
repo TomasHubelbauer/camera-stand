@@ -6,8 +6,8 @@ This repository hosts the development of a 3D model for a 3D printed part that
 is used to mount my camera to use as a webcam behind my screen.
 
 I develop the part in OpenSCAD configured to export ASCII STL, slice it using
-PrusaSlicer with a script to unzip the 3MF project file to a directory of the
-same name and print it using a Prusa MK3S 3D printer.
+PrusaSlicer with a script (`./3mf-zip-dir.sh`) to unzip the 3MF project file to
+a directory of the same name and print it using a Prusa MK3S 3D printer.
 
 The part sits on top of the VESA mount the monitor is secured to the wall with.
 
