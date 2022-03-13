@@ -20,7 +20,7 @@ tip_pit_depth = 40;
 
 // The diameter of a single screw used to calculate the gap between two parts
 // that sit supported on and by the screw when bridged over their tops
-screw_diameter = 3.5;
+screw_diameter = 4;
 
 // The thickness of the VESA mount plate the two rectangular legs sit against
 // the sides of
@@ -70,7 +70,7 @@ translate([0, -plate_screen_gap, 0]) cube([leg_bridge_width, plate_screen_gap, p
 
 // The other rectangular leg that hugs the flat side of the VESA mount plate
 // directed towards the wall as opposed to towards the back of the monitor
-translate([0, 0, plate_screen_gap + plate_thickness]) cube([leg_bridge_width, plate_screen_gap * 2, plate_screen_gap]);
+translate([(leg_bridge_width - 74) / 2, 0, plate_screen_gap + plate_thickness]) cube([74, plate_screen_gap * 2, plate_screen_gap]);
 
 // TODO: Design the other plate with 74 mm of width between the flaps on the
 // other side of the VESA mount plate
