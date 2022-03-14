@@ -8,7 +8,7 @@ screws_distance = 96;
 // This distance is important, because it is the maximum width for something to
 // be able to slot between the screws and these flaps in order to go deep into
 // the gap between the VESA mount plate and the back of the monitor.
-flaps_distance = 75;
+flaps_distance = 74;
 
 // The length of the surface of the flap beneath the screw that needs to be
 // accounted for for the main rectangular leg to be narrower by in order to be
