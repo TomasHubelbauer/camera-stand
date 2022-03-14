@@ -41,7 +41,7 @@ screw_diameter = 3.6;
 
 // The thickness of the VESA mount plate the two rectangular legs sit against
 // the sides of
-plate_thickness = 2;
+plate_thickness = 1.6;
 
 // The size of the square columns that sit at the outside of the top left and
 // right screws of the VESA mount plate forming a hook together with the main
@@ -92,11 +92,8 @@ linear_extrude(plate_screen_gap) polygon([
 
 // The top surface that bridges the gap between the rectangular legs that hug
 // the flat sides of the VESA mount plate
-translate([0, -plate_screen_gap, 0]) cube([leg_bridge_width, plate_screen_gap, plate_screen_gap + 2 + plate_screen_gap]);
+translate([0, -plate_screen_gap, 0]) cube([leg_bridge_width, plate_screen_gap, plate_screen_gap * 2 + plate_thickness]);
 
 // The other rectangular leg that hugs the flat side of the VESA mount plate
 // directed towards the wall as opposed to towards the back of the monitor
-//translate([(leg_bridge_width - 74) / 2, 0, plate_screen_gap + plate_thickness]) cube([74, plate_screen_gap * 2, plate_screen_gap]);
-
-// TODO: Design the other plate with 74 mm of width between the flaps on the
-// other side of the VESA mount plate
+translate([square_leg_size + screw_diameter + flap_width, 0, plate_screen_gap + plate_thickness]) cube([flaps_distance, 25, plate_screen_gap]);
