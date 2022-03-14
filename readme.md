@@ -7,6 +7,10 @@ is used to mount my camera to use as a webcam behind my monitor.
 
 ## Status & Goal
 
+- [x] Design a part that can sit snugly on the edge of the VESA mount plate
+- [ ] Design a spacer that brings the vertical flat up to the camera level
+- [ ] Design a recess in the shape of the camera body + the dummy battery plug
+
 The part is a work in progress and I am iterating on the design as of current.
 
 My goal is to design a shape that can sit on the top edge of the plate of the
