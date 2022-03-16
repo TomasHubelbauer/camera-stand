@@ -40,8 +40,11 @@ tip_flap_distance = 36;
 // The depth between the top point of the VESA mount plate arc and the possible
 // flaps that could collide with a box slotted in between the screen and the
 // mount plate between the two top screws
-// This is the minimum, I have not measured and fit tested for a maximum yet.
-tip_pit_depth = 115;
+// I've test-fitted to be up to 115 mm deep and there should be no other flaps
+// so it theoretically can go all the way below the monitor, but there is only
+// limited value to making this too large as there are diminishing returns on
+// the snugness of the assembly compared to the printing time.
+tip_pit_depth = 80;
 
 // The diameter of a single screw used to calculate the gap between two parts
 // that sit supported on and by the screw when bridged over their tops
@@ -68,12 +71,8 @@ linear_extrude(plate_screen_gap) polygon([
   [0, 0],
   // The widest distance covering the length between the side square legs
   [leg_bridge_width, 0],
-  // The depth of the first square leg depth with extra to work as a hook
-  [leg_bridge_width, tip_pit_depth],
-  // The same depth but shifted to the side of the screw to end the hook side
-  [leg_bridge_width - square_leg_size, tip_pit_depth],
   // The first point that makes the bridge line over the screw
-  [leg_bridge_width - square_leg_size, tip_screw_distance],
+  [leg_bridge_width, tip_screw_distance],
   // The second point of the screw bridge line, shifted by screw width
   [leg_bridge_width - square_leg_size - screw_diameter, tip_screw_distance],
   // The surface that sits on the flap close to the screw over the flap's length
@@ -81,9 +80,9 @@ linear_extrude(plate_screen_gap) polygon([
   // The other side of the flap top surface that doesn't go deeper than this
   [leg_bridge_width - square_leg_size - screw_diameter - flap_width, tip_flap_distance],
   // The first point of the main rectangular leg that slots between the screws and flaps
-  [leg_bridge_width - square_leg_size - screw_diameter - flap_width, tip_pit_depth],
+  [leg_bridge_width / 2, tip_pit_depth],
   // The second point of the main rectangular leg that goes deep into the plate/screen gap
-  [square_leg_size + screw_diameter + flap_width, tip_pit_depth],
+  [leg_bridge_width / 2, tip_pit_depth],
   // The first point of the top of the other flap that the rectangular leg is narrower by
   [square_leg_size + screw_diameter + flap_width, tip_flap_distance],
   // The second point of the top surface of the second flap next to the main leg
@@ -91,11 +90,7 @@ linear_extrude(plate_screen_gap) polygon([
   // The first point over the bridge surface that makes the hook around the second screw
   [square_leg_size + screw_diameter, tip_screw_distance],
   // The second point over the second screw bridge layer, shifted by the screw diameter
-  [square_leg_size, tip_screw_distance],
-  // The depth of the other columnal square leg that makes a hook around the screw
-  [square_leg_size, tip_pit_depth],
-  // The other point of the square columnal leg brinding the polygon back to origin
-  [0, tip_pit_depth],
+  [0, tip_screw_distance],
 ]);
 
 // The top surface that bridges the gap between the rectangular legs that hug
