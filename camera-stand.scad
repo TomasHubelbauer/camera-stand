@@ -1,11 +1,3 @@
-// The depth by which the two parts slot into each other
-// The stand would probably be too tall to print in one part (althought I might
-// still try that), so I am designing it such that there is a base with a cube
-// protruding from it and then the stand itself will slot onto the protruding
-// cube to complete the assembly. This will allow printing in two parts and
-// tweaking the parts separately for faster iteration times as of now.
-slot_depth = 20;
-
 // The distance between the right side of the left screw and left side of the
 // right screw connecting the VESA mount plate and the screen (as seen when
 // sitting in front of the screen)
@@ -52,7 +44,9 @@ screw_diameter = 3.6;
 
 // The thickness of the VESA mount plate the two rectangular legs sit against
 // the sides of
-plate_thickness = 1.6;
+// This is not exact, I am affording some play for ease of slotting the part
+// onto the edge of the plate, but not too much so it remains snug and sturdy.
+plate_thickness = 1.7;
 
 // The size of the square columns that sit at the outside of the top left and
 // right screws of the VESA mount plate forming a hook together with the main
@@ -95,7 +89,7 @@ linear_extrude(plate_screen_gap) polygon([
 
 // The top surface that bridges the gap between the rectangular legs that hug
 // the flat sides of the VESA mount plate
-translate([0, -plate_screen_gap - slot_depth, 0]) cube([leg_bridge_width, plate_screen_gap + slot_depth, plate_screen_gap * 2 + plate_thickness]);
+translate([0, -plate_screen_gap, 0]) cube([leg_bridge_width, plate_screen_gap, plate_screen_gap * 2 + plate_thickness]);
 
 // The other rectangular leg that hugs the flat side of the VESA mount plate
 // directed towards the wall as opposed to towards the back of the monitor
