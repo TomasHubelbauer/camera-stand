@@ -97,10 +97,21 @@ translate([square_leg_size + screw_diameter + flap_width, 0, plate_screen_gap + 
 
 difference() {
   union() {
+    // The vertical extension to raise the surface to the monitor top edge level
     translate([0, -84, 0]) cube([leg_bridge_width, 80, plate_screen_gap * 2 + plate_thickness]);
-    translate([0, -84, -15]) cube([leg_bridge_width, 4, 40]);
+    
+    // The surface the camera sits on itself, perpendicular to the previous column
+    translate([0, -84, -61]) cube([leg_bridge_width, 4, 70]);
   }
 
-  translate([25, -60, 5]) rotate([90, 0, 0]) cylinder(30, 10, 10);
-  translate([20, -85, 11]) cube([10, 6, 15]);
+  // A gap in the surface for the camera dummy battery power adapter plug to go through
+  translate([15, -85, -40]) cube([20, 6, 30]);
+}
+
+brace_width = 10;
+
+// The support brace holding the horizontal surface to the vertical column
+difference() {
+  translate([(leg_bridge_width - brace_width) / 2, -80, -50]) cube([brace_width, 50, 50]);
+  translate([(leg_bridge_width - (brace_width + 2)) / 2, -30, -50]) rotate([0, 90, 0]) cylinder(brace_width + 2, 50, 50);
 }
