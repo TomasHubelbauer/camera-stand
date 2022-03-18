@@ -94,3 +94,13 @@ translate([0, -plate_screen_gap, 0]) cube([leg_bridge_width, plate_screen_gap, p
 // The other rectangular leg that hugs the flat side of the VESA mount plate
 // directed towards the wall as opposed to towards the back of the monitor
 translate([square_leg_size + screw_diameter + flap_width, 0, plate_screen_gap + plate_thickness]) cube([flaps_distance, 25, plate_screen_gap]);
+
+difference() {
+  union() {
+    translate([0, -84, 0]) cube([leg_bridge_width, 80, plate_screen_gap * 2 + plate_thickness]);
+    translate([0, -84, -15]) cube([leg_bridge_width, 4, 40]);
+  }
+
+  translate([25, -60, 5]) rotate([90, 0, 0]) cylinder(30, 10, 10);
+  translate([20, -85, 11]) cube([10, 6, 15]);
+}
