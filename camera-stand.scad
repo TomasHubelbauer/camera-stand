@@ -105,7 +105,7 @@ difference() {
   }
 
   // A gap in the surface for the camera dummy battery power adapter plug to go through
-  translate([15, -85, -40]) cube([20, 6, 30]);
+  translate([5, -85, -40]) cube([30, 6, 30]);
 }
 
 brace_width = 10;

@@ -7,8 +7,8 @@
  <metadata name="Copyright"></metadata>
  <metadata name="LicenseTerms"></metadata>
  <metadata name="Rating"></metadata>
- <metadata name="CreationDate">2022-03-18</metadata>
- <metadata name="ModificationDate">2022-03-18</metadata>
+ <metadata name="CreationDate">2022-03-31</metadata>
+ <metadata name="ModificationDate">2022-03-31</metadata>
  <metadata name="Application">PrusaSlicer-2.4.1+x64</metadata>
  <resources>
   <object id="1" type="model">
@@ -45,15 +45,15 @@
      <vertex x="-55.5999985" y="2" z="29.6499996"/>
      <vertex x="-55.5999985" y="32" z="29.6499996"/>
      <vertex x="-20.5999985" y="-82" z="15.6499996"/>
-     <vertex x="-40.5999985" y="-82" z="15.6499996"/>
-     <vertex x="-40.5999985" y="-82" z="-14.3500004"/>
+     <vertex x="-50.5999985" y="-82" z="15.6499996"/>
+     <vertex x="-50.5999985" y="-82" z="-14.3500004"/>
      <vertex x="-20.5999985" y="-82" z="-14.3500004"/>
      <vertex x="5" y="-78" z="-24.3500004"/>
      <vertex x="-5" y="-78" z="-24.3500004"/>
      <vertex x="-20.5999985" y="-78" z="15.6499996"/>
      <vertex x="-20.5999985" y="-78" z="-14.3500004"/>
-     <vertex x="-40.5999985" y="-78" z="15.6499996"/>
-     <vertex x="-40.5999985" y="-78" z="-14.3500004"/>
+     <vertex x="-50.5999985" y="-78" z="15.6499996"/>
+     <vertex x="-50.5999985" y="-78" z="-14.3500004"/>
      <vertex x="5" y="-38.3955994" z="24.5573788"/>
      <vertex x="5" y="-48.3367996" z="21.3272705"/>
      <vertex x="5" y="-57.3893013" z="16.1008492"/>
@@ -165,6 +165,12 @@
      <triangle v1="55" v2="14" v3="54"/>
      <triangle v1="49" v2="14" v3="55"/>
      <triangle v1="14" v2="49" v3="35"/>
+     <triangle v1="52" v2="41" v3="42"/>
+     <triangle v1="41" v2="52" v3="51"/>
+     <triangle v1="47" v2="49" v3="46"/>
+     <triangle v1="49" v2="47" v3="48"/>
+     <triangle v1="53" v2="42" v3="43"/>
+     <triangle v1="42" v2="53" v3="52"/>
      <triangle v1="51" v2="40" v3="41"/>
      <triangle v1="40" v2="51" v3="50"/>
      <triangle v1="45" v2="54" v3="44"/>
@@ -175,12 +181,6 @@
      <triangle v1="53" v2="44" v3="54"/>
      <triangle v1="50" v2="18" v3="40"/>
      <triangle v1="18" v2="50" v3="13"/>
-     <triangle v1="53" v2="42" v3="43"/>
-     <triangle v1="42" v2="53" v3="52"/>
-     <triangle v1="52" v2="41" v3="42"/>
-     <triangle v1="41" v2="52" v3="51"/>
-     <triangle v1="47" v2="49" v3="46"/>
-     <triangle v1="49" v2="47" v3="48"/>
      <triangle v1="56" v2="57" v3="58"/>
      <triangle v1="58" v2="59" v3="60"/>
      <triangle v1="57" v2="59" v3="58"/>
@@ -228,6 +228,6 @@
   </object>
  </resources>
  <build>
-  <item objectid="1" transform="-1 1.2246468e-16 -1.23259516e-32 -3.69778549e-32 -4.4408921e-16 1 1.2246468e-16 1 2.22044605e-16 125 105 82" printable="1"/>
+  <item objectid="1" transform="1 0 0 0 2.22044605e-16 1 0 -1 2.22044605e-16 125 105 82" printable="1"/>
  </build>
 </model>
