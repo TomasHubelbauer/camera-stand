@@ -1,5 +1,5 @@
 # Generate the OpenSCAD PNG render as PrusaSlicer CLI won't include Metadata/thumbnail.png
-# https://github.com/prusa3d/PrusaSlicer/issues/8492
+https://github.com/prusa3d/PrusaSlicer/issues/7878
 /Applications/OpenSCAD.app/Contents/MacOS/OpenSCAD camera-stand.scad -o camera-stand.png
 
 # Generate the GCode
