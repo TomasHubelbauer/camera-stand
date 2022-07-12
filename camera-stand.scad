@@ -58,6 +58,12 @@ square_leg_size = 4;
 // (left leg column, left screw, rectangular leg, right screw, right leg column)
 leg_bridge_width = square_leg_size * 2 + screw_diameter * 2 + screws_distance;
 
+// The thickness of the arch that connects the two main surfaces
+brace_width = 4;
+
+// The radius of the cylinder that cuts out the arch shape in the brace
+arch_radius = 60;
+
 // The rectangular leg that slots in between the screen back and the VESA mount
 // plate on one axis and the two top screws on the plate on the other axis
 linear_extrude(plate_screen_gap) polygon([
@@ -104,14 +110,14 @@ difference() {
     translate([0, -84, -61]) cube([leg_bridge_width, 4, 70]);
   }
 
+  gap_width = 30;
+
   // A gap in the surface for the camera dummy battery power adapter plug to go through
-  translate([5, -85, -40]) cube([30, 6, 30]);
+  translate([gap_width, -85, -25]) cube([((leg_bridge_width - brace_width) / 2) - gap_width, 6, 10]);
 }
 
-brace_width = 10;
-
-// The support brace holding the horizontal surface to the vertical column
+// The support arch holding the horizontal surface to the vertical column
 difference() {
-  translate([(leg_bridge_width - brace_width) / 2, -80, -50]) cube([brace_width, 50, 50]);
-  translate([(leg_bridge_width - (brace_width + 2)) / 2, -30, -50]) rotate([0, 90, 0]) cylinder(brace_width + 2, 50, 50);
+  translate([(leg_bridge_width - brace_width) / 2, -80, -arch_radius]) cube([brace_width, arch_radius, arch_radius]);
+  translate([(leg_bridge_width - (brace_width + 2)) / 2, -20, -arch_radius]) rotate([0, 90, 0]) cylinder(brace_width + 2, arch_radius, arch_radius);
 }
