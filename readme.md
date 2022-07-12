@@ -7,23 +7,15 @@ is used to mount my camera to use as a webcam behind my monitor.
 
 ## Status & Goal
 
-- [x] Design a part that can sit snugly on the edge of the VESA mount plate
-- [ ] Design a spacer that brings the vertical flat up to the camera level
-- [ ] Design a recess in the shape of the camera body + the dummy battery plug
+This part should be complete now provided the test print fits.
 
-The part is a work in progress and I am iterating on the design as of current.
-
-My goal is to design a shape that can sit on the top edge of the plate of the
-VESA mount I use to mount my screen to the wall. The mount is made of two parts
-that slide together and are secured together with a pair of screws. I want to
-use the thickness and the arc of the edge as well as the screws to sit the part
-on the VESA mount and prevent it from shifting or moving in any direction but
-upwards (so that I can remove it), the rest will be secured in place by the
-geometry of the spots of the mount touching the part and gravity.
-
-Once I have this level surface behind my monitor, I will carve out a recess into
-it in the shape of the bottom side of my camera and sit the camera in it so that
-it is exactly pointed and usable as a webcam for me.
+The goal of this part is to be a mount that fits into the VESA mount of my
+monitor and extends a flat platform onto which my camera can sit. The platform
+has hole for the dummy battery power plug as well as a recess in the shape of
+the camera's body so that the camera doesn't shift away from the central point
+when I turn it on and off. The recess/track that fits the camera's body in the
+flat of the platform also extends to make room for the camera's grip handle and
+the lens which both extend to contour of the camera as projected on the surface.
 
 ## Process & Files
 
