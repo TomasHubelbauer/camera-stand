@@ -27,7 +27,11 @@ it is exactly pointed and usable as a webcam for me.
 
 ## Process & Files
 
-Note: this process is implemented in [`slice.sh`](slice.sh).
+Note: this process is implemented in [`slice.sh`](slice.sh). The simplified
+process now is to open OpenSCAD and VS Code side by side, make changes in VS
+Code and see them reflect in OpenSCAD and on each iteration I am happy with run
+`./slice.sh` which generates STL, slices it to GCode and export a 3MF directory
+of the PrusaSlicer project file as well.
 
 I use OpenSCAD to design the part. I split my screen into VS Code on the left
 and OpenSCAD on the right. OpenSCAD is configured to hide the editor and with
