@@ -107,7 +107,22 @@ difference() {
     translate([0, -84, 0]) cube([leg_bridge_width, 80, plate_screen_gap * 2 + plate_thickness]);
     
     // The surface the camera sits on itself, perpendicular to the previous column
-    translate([0, -84, -61]) cube([leg_bridge_width, 4, 70]);
+    difference() {
+      translate([0, -84, -61]) cube([leg_bridge_width, 4, 70]);
+
+      track_offset = 12;
+      track_size = 34;
+      track_limit = track_offset + track_size;
+
+      // The track in which the camera sits so it doesn't shift back and forth
+      translate([0, -85, -2.3 - track_limit + track_offset]) cube([leg_bridge_width, 3, track_limit - track_offset]);
+    
+      // The cutout for the camera's grip handle to not crash with the track
+      translate([0, -85, -2.3 - track_limit + track_offset - 15 + .1]) cube([30, 3, 15]);
+
+      // The cutout for the camera's lens which also extends to the bottom plate
+      translate([60 - (40 / 2), -85, -2.3 - track_limit + track_offset - 25 + .1]) cube([40, 3, 25]);
+    }
   }
 
   gap_width = 30;
