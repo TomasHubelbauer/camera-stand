@@ -3,7 +3,7 @@
 This repository hosts the development of a 3D model for a 3D printed part that
 is used to mount my camera to use as a webcam behind my monitor.
 
-![](camera-stand.3mf/Metadata/thumbnail.png)
+![](camera-stand.png)
 
 ## Status & Goal
 
@@ -26,6 +26,8 @@ it in the shape of the bottom side of my camera and sit the camera in it so that
 it is exactly pointed and usable as a webcam for me.
 
 ## Process & Files
+
+Note: this process is implemented in `3mf-zip-dir.sh`.
 
 I use OpenSCAD to design the part. I split my screen into VS Code on the left
 and OpenSCAD on the right. OpenSCAD is configured to hide the editor and with
