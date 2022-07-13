@@ -121,7 +121,7 @@ difference() {
       translate([0, -85, -2.3 - track_limit + track_offset - 15 + .1]) cube([30, 3, 15]);
 
       // The cutout for the camera's lens which also extends to the bottom plate
-      translate([60 - (40 / 2), -85, -2.3 - track_limit + track_offset - 25 + .1]) cube([40, 3, 25]);
+      translate([60 - (40 / 2) + 5, -85, -2.3 - track_limit + track_offset - 25 + .1]) cube([40, 3, 25]);
     }
 
     plate_height = 35;
