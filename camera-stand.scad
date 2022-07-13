@@ -118,7 +118,7 @@ difference() {
       translate([0, -85, -2.8 - track_limit + track_offset]) cube([leg_bridge_width, 3, track_limit - track_offset]);
     
       // The cutout for the camera's grip handle to not crash with the track
-      translate([0, -85, -2.3 - track_limit + track_offset - 15 + .1]) cube([29.5, 3, 15]);
+      translate([0, -85, -2.3 - track_limit + track_offset - 15 + .1]) cube([25, 3, 15]);
 
       // The cutout for the camera's lens which also extends to the bottom plate
       translate([60 - (40 / 2) + 5, -85, -2.3 - track_limit + track_offset - 25 + .1]) cube([40, 3, 25]);
