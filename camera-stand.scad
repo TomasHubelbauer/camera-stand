@@ -59,7 +59,7 @@ square_leg_size = 4;
 leg_bridge_width = square_leg_size * 2 + screw_diameter * 2 + screws_distance;
 
 // The thickness of the arch that connects the two main surfaces
-brace_width = 4;
+brace_width = 10;
 
 // The radius of the cylinder that cuts out the arch shape in the brace
 arch_radius = 60;
@@ -136,8 +136,20 @@ difference() {
   translate([gap_width, -85, -25]) cube([((leg_bridge_width - brace_width) / 2) - gap_width, 6, 10]);
 }
 
-// The support arch holding the horizontal surface to the vertical column
+// The middle support arch holding the horizontal surface to the vertical column
 difference() {
   translate([(leg_bridge_width - brace_width) / 2, -80, -arch_radius]) cube([brace_width, arch_radius, arch_radius]);
   translate([(leg_bridge_width - (brace_width + 2)) / 2, -20, -arch_radius]) rotate([0, 90, 0]) cylinder(brace_width + 2, arch_radius, arch_radius);
+}
+
+// The left support arch holding the horizontal surface to the vertical column
+difference() {
+  translate([leg_bridge_width - brace_width, -80, -arch_radius]) cube([brace_width, arch_radius, arch_radius]);
+  translate([leg_bridge_width - (brace_width + 2) + 1, -20, -arch_radius]) rotate([0, 90, 0]) cylinder(brace_width + 2, arch_radius, arch_radius);
+}
+
+// The right support arch holding the horizontal surface to the vertical column
+difference() {
+  translate([0, -80, -arch_radius]) cube([brace_width, arch_radius, arch_radius]);
+  translate([-1, -20, -arch_radius]) rotate([0, 90, 0]) cylinder(brace_width + 2, arch_radius, arch_radius);
 }
