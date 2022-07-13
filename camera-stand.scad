@@ -105,14 +105,14 @@ difference() {
   union() {
     // The vertical extension to raise the surface to the monitor top edge level
     translate([0, -84, 0]) cube([leg_bridge_width, 80, plate_screen_gap * 2 + plate_thickness]);
-    
+
+    track_offset = 12;
+    track_size = 34;
+    track_limit = track_offset + track_size;
+
     // The surface the camera sits on itself, perpendicular to the previous column
     difference() {
       translate([0, -84, -61]) cube([leg_bridge_width, 4, 70]);
-
-      track_offset = 12;
-      track_size = 34;
-      track_limit = track_offset + track_size;
 
       // The track in which the camera sits so it doesn't shift back and forth
       translate([0, -85, -2.3 - track_limit + track_offset]) cube([leg_bridge_width, 3, track_limit - track_offset]);
@@ -123,6 +123,11 @@ difference() {
       // The cutout for the camera's lens which also extends to the bottom plate
       translate([60 - (40 / 2), -85, -2.3 - track_limit + track_offset - 25 + .1]) cube([40, 3, 25]);
     }
+
+    plate_height = 35;
+    back_thickness = 5;
+
+    translate([0, -84 - plate_height, -2.3]) cube([leg_bridge_width, plate_height, back_thickness]);
   }
 
   gap_width = 30;
