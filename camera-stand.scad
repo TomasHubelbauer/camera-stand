@@ -130,10 +130,10 @@ difference() {
     translate([0, -84 - plate_height, -2.3]) cube([leg_bridge_width, plate_height, back_thickness]);
   }
 
-  gap_width = 30;
+  gap_width = 40;
 
   // A gap in the surface for the camera dummy battery power adapter plug to go through
-  translate([gap_width, -85, -25]) cube([((leg_bridge_width - brace_width) / 2) - gap_width, 6, 10]);
+  translate([10, -85, -25]) cube([gap_width, 6, 10]);
 }
 
 // The middle support arch holding the horizontal surface to the vertical column
