@@ -9,7 +9,7 @@
  <metadata name="Rating"></metadata>
  <metadata name="CreationDate">2022-07-13</metadata>
  <metadata name="ModificationDate">2022-07-13</metadata>
- <metadata name="Application">PrusaSlicer-2.4.1+x64</metadata>
+ <metadata name="Application">PrusaSlicer-2.4.2+x64</metadata>
  <resources>
   <object id="1" type="model">
    <mesh>
@@ -430,22 +430,22 @@
      <triangle v1="146" v2="72" v3="145"/>
      <triangle v1="140" v2="72" v3="146"/>
      <triangle v1="72" v2="140" v3="68"/>
-     <triangle v1="136" v2="145" v3="135"/>
-     <triangle v1="145" v2="136" v3="146"/>
-     <triangle v1="135" v2="144" v3="134"/>
-     <triangle v1="144" v2="135" v3="145"/>
-     <triangle v1="142" v2="131" v3="132"/>
-     <triangle v1="131" v2="142" v3="141"/>
-     <triangle v1="144" v2="133" v3="134"/>
-     <triangle v1="133" v2="144" v3="143"/>
-     <triangle v1="137" v2="146" v3="136"/>
-     <triangle v1="146" v2="137" v3="140"/>
-     <triangle v1="138" v2="140" v3="137"/>
-     <triangle v1="140" v2="138" v3="139"/>
      <triangle v1="141" v2="124" v3="131"/>
      <triangle v1="124" v2="141" v3="121"/>
+     <triangle v1="142" v2="131" v3="132"/>
+     <triangle v1="131" v2="142" v3="141"/>
+     <triangle v1="138" v2="140" v3="137"/>
+     <triangle v1="140" v2="138" v3="139"/>
+     <triangle v1="135" v2="144" v3="134"/>
+     <triangle v1="144" v2="135" v3="145"/>
+     <triangle v1="137" v2="146" v3="136"/>
+     <triangle v1="146" v2="137" v3="140"/>
      <triangle v1="143" v2="132" v3="133"/>
      <triangle v1="132" v2="143" v3="142"/>
+     <triangle v1="136" v2="145" v3="135"/>
+     <triangle v1="145" v2="136" v3="146"/>
+     <triangle v1="144" v2="133" v3="134"/>
+     <triangle v1="133" v2="144" v3="143"/>
      <triangle v1="66" v2="7" v3="6"/>
      <triangle v1="7" v2="66" v3="147"/>
      <triangle v1="147" v2="66" v3="148"/>
@@ -457,22 +457,22 @@
      <triangle v1="154" v2="71" v3="153"/>
      <triangle v1="148" v2="71" v3="154"/>
      <triangle v1="71" v2="148" v3="66"/>
-     <triangle v1="149" v2="1" v3="3"/>
-     <triangle v1="1" v2="149" v3="125"/>
-     <triangle v1="150" v2="3" v3="15"/>
-     <triangle v1="3" v2="150" v3="149"/>
-     <triangle v1="7" v2="148" v3="5"/>
-     <triangle v1="148" v2="7" v3="147"/>
-     <triangle v1="11" v2="152" v3="13"/>
-     <triangle v1="152" v2="11" v3="153"/>
-     <triangle v1="5" v2="154" v3="8"/>
-     <triangle v1="154" v2="5" v3="148"/>
-     <triangle v1="151" v2="15" v3="14"/>
-     <triangle v1="15" v2="151" v3="150"/>
      <triangle v1="8" v2="153" v3="11"/>
      <triangle v1="153" v2="8" v3="154"/>
+     <triangle v1="11" v2="152" v3="13"/>
+     <triangle v1="152" v2="11" v3="153"/>
+     <triangle v1="150" v2="3" v3="15"/>
+     <triangle v1="3" v2="150" v3="149"/>
      <triangle v1="152" v2="14" v3="13"/>
      <triangle v1="14" v2="152" v3="151"/>
+     <triangle v1="5" v2="154" v3="8"/>
+     <triangle v1="154" v2="5" v3="148"/>
+     <triangle v1="7" v2="148" v3="5"/>
+     <triangle v1="148" v2="7" v3="147"/>
+     <triangle v1="149" v2="1" v3="3"/>
+     <triangle v1="1" v2="149" v3="125"/>
+     <triangle v1="151" v2="15" v3="14"/>
+     <triangle v1="15" v2="151" v3="150"/>
      <triangle v1="74" v2="155" v3="120"/>
      <triangle v1="74" v2="156" v3="155"/>
      <triangle v1="74" v2="157" v3="156"/>
@@ -488,8 +488,6 @@
      <triangle v1="162" v2="48" v3="51"/>
      <triangle v1="58" v2="120" v3="155"/>
      <triangle v1="120" v2="58" v3="56"/>
-     <triangle v1="60" v2="155" v3="156"/>
-     <triangle v1="155" v2="60" v3="58"/>
      <triangle v1="162" v2="52" v3="161"/>
      <triangle v1="52" v2="162" v3="51"/>
      <triangle v1="159" v2="64" v3="158"/>
@@ -498,10 +496,12 @@
      <triangle v1="61" v2="161" v3="52"/>
      <triangle v1="65" v2="156" v3="157"/>
      <triangle v1="156" v2="65" v3="60"/>
-     <triangle v1="160" v2="63" v3="159"/>
-     <triangle v1="63" v2="160" v3="61"/>
+     <triangle v1="60" v2="155" v3="156"/>
+     <triangle v1="155" v2="60" v3="58"/>
      <triangle v1="64" v2="157" v3="158"/>
      <triangle v1="157" v2="64" v3="65"/>
+     <triangle v1="160" v2="63" v3="159"/>
+     <triangle v1="63" v2="160" v3="61"/>
      <triangle v1="163" v2="164" v3="165"/>
      <triangle v1="165" v2="166" v3="167"/>
      <triangle v1="164" v2="166" v3="165"/>
