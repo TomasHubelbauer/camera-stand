@@ -93,6 +93,9 @@ linear_extrude(plate_screen_gap) polygon([
   [0, tip_screw_distance],
 ]);
 
+// The length of the channel the dummy battery plug goes into
+gap_width = 50.6;
+
 // The top surface that bridges the gap between the rectangular legs that hug
 // the flat sides of the VESA mount plate
 translate([0, -plate_screen_gap, 0]) cube([leg_bridge_width, plate_screen_gap, plate_screen_gap * 2 + plate_thickness]);
@@ -139,27 +142,28 @@ difference() {
     translate([0, -84 - plate_height, -3.5]) cube([leg_bridge_width, plate_height, back_thickness]);
   }
 
-  gap_width = 50.6;
-
   // A gap in the surface for the camera dummy battery power adapter plug to go through
-  translate([-1, -85, -31.5]) cube([gap_width + 1, 6, 10]);
+  translate([-1, -85, -31.5]) cube([gap_width + 1, 10, 10]);
 }
 
 // The middle support arch holding the horizontal surface to the vertical column
 difference() {
   translate([(leg_bridge_width - brace_width) / 2, -80, -arch_radius]) cube([brace_width, arch_radius, arch_radius]);
-  translate([(leg_bridge_width - (brace_width + 2)) / 2, -20, -arch_radius]) rotate([0, 90, 0]) cylinder(brace_width + 2, arch_radius, arch_radius);
+  translate([(leg_bridge_width - (brace_width + 2)) / 2, -15, -arch_radius - 5]) rotate([0, 90, 0]) cylinder(brace_width + 2, arch_radius, arch_radius);
 }
 
 // The left support arch holding the horizontal surface to the vertical column
 difference() {
   translate([leg_bridge_width - brace_width, -80, -arch_radius]) cube([brace_width, arch_radius, arch_radius]);
-  translate([leg_bridge_width - (brace_width + 2) + 1, -20, -arch_radius]) rotate([0, 90, 0]) cylinder(brace_width + 2, arch_radius, arch_radius);
+  translate([leg_bridge_width - (brace_width + 2) + 1, -15, -arch_radius - 5]) rotate([0, 90, 0]) cylinder(brace_width + 2, arch_radius, arch_radius);
 }
 
 // The right support arch holding the horizontal surface to the vertical column
 difference() {
   translate([0, -80, -arch_radius]) cube([brace_width, arch_radius, arch_radius]);
-  translate([-1, -20, -arch_radius]) rotate([0, 90, 0]) cylinder(brace_width + 2, arch_radius, arch_radius);
-  translate([-1, -80.5, -26.5]) rotate([0, 90, 0]) cylinder(12, 5, 5);
+  translate([-1, -15, -arch_radius - 5]) rotate([0, 90, 0]) cylinder(brace_width + 2, arch_radius, arch_radius);
+  translate([-1, -75, -26.5]) rotate([0, 90, 0]) cylinder(12, 5, 5);
+
+  // The same gap as above to cut through the arch in addition to the platform
+  translate([-1, -85, -31.5]) cube([gap_width + 1, 10, 10]);
 }
