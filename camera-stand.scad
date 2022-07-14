@@ -161,4 +161,5 @@ difference() {
 difference() {
   translate([0, -80, -arch_radius]) cube([brace_width, arch_radius, arch_radius]);
   translate([-1, -20, -arch_radius]) rotate([0, 90, 0]) cylinder(brace_width + 2, arch_radius, arch_radius);
+  translate([-1, -77.5, -26.5]) rotate([0, 90, 0]) cylinder(12, 5.5, 5.5);
 }
