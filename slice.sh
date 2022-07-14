@@ -1,3 +1,8 @@
+# TODO: Consider loading the config from:
+# /Users/tomashubelbauer/Library/Application Support/PrusaSlicer
+# TODO: Switch to tree supports once PrusaSlicer supports them for FDM (not just SLA)
+# https://github.com/prusa3d/PrusaSlicer/issues/1514
+
 # Generate the OpenSCAD ASCII STL to slice by PrusaSlicer in the next steps
 /Applications/OpenSCAD.app/Contents/MacOS/OpenSCAD camera-stand.scad -o camera-stand.stl
 
